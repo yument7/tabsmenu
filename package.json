@@ -1,0 +1,15 @@
+{
+  "name": "tabsmenu",
+  "version": "1.0.0",
+  "description": "a tabs menu plugins of jquery",
+  "main": "src/tabsMenu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "lvao",
+  "email":"1137804712@qq.com",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {}
+}
