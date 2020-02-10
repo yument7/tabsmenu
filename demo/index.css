@@ -1,3 +1,7 @@
+.container{
+	margin: 0 auto;
+}
+
 a{
 	outline: none;
 	text-decoration: none;
@@ -96,5 +100,5 @@ a{
 	box-sizing: content-box;
 	border-bottom: solid 2px #2f4050;
 	margin-left: 260px;
-	width:800px;
+	width:calc(60% - 260px);
 }

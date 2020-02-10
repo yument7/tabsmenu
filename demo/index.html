@@ -4,98 +4,100 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>tabsMenu demo</title>
-		<link rel="stylesheet" href="asserts/tabsMenu.min.css" />
+		<link rel="stylesheet" href="../dist/tabsMenu.min.css" />
 		<link rel="stylesheet" href="asserts/font-awesome/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="index.css" />
 		<script type="text/javascript" src="asserts/jquery.min.js"></script>
-		<script type="text/javascript" src="asserts/tabsMenu.min.js"></script>
-		<script type="text/javascript" src="index.js"></script>
+		<script type="text/javascript" src="../dist/tabsMenu.min.js"></script>
 	</head>
 
 	<body>
-		<div class="sidebar-nav">
-			<ul class="metismenu" id="side-menu">
-				<li class="mm-active">
-					<a class="has-arrow active" href="#" aria-expanded="true">
-						<span class="fa fa-desktop"></span>
-						<span class="nav-label">PC-UI Components</span>
-					</a>
-					<ul class="mm-collapse">
-						<li>
-							<a class="J_menuItem" href="page1.html">page1</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page2.html">page2</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page3.html">page3</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page4.html">page4</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page5.html">page5</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page6.html">page6</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page7.html">page7</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page8.html">page8</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page9.html">page9</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page10.html">page10</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page11.html">page11</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page12.html">page12</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page13.html">page13</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page14.html">page14</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page15.html">page15</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page16.html">page16</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page17.html">page17</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page18.html">page18</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page19.html">page19</a>
-						</li>
-						<li>
-							<a class="J_menuItem" href="page20.html">page20</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
+		<div class="container">
+			<div class="sidebar-nav">
+				<ul class="metismenu" id="side-menu">
+					<li class="mm-active">
+						<a class="has-arrow active" href="#" aria-expanded="true">
+							<span class="fa fa-desktop"></span>
+							<span class="nav-label">MENU</span>
+						</a>
+						<ul class="mm-collapse">
+							<li>
+								<a class="J_menuItem" href="page1.html">page1</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page2.html">page2</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page3.html">page3</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page4.html">page4</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page5.html">page5</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page6.html">page6</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page7.html">page7</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page8.html">page8</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page9.html">page9</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page10.html">page10</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page11.html">page11</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page12.html">page12</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page13.html">page13</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page14.html">page14</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page15.html">page15</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page16.html">page16</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page17.html">page17</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page18.html">page18</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page19.html">page19</a>
+							</li>
+							<li>
+								<a class="J_menuItem" href="page20.html">page20</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="content-tabs" id="test"></div>
 		</div>
-		<div class="content-tabs" id="test"></div>
+
 		<script>
-			$(function(){
+			$(function() {
 				$("#test").tabsMenu({
-					kind:".J_menuItem",
-					activeKind:"metismenu-active",
+					kind: ".J_menuItem",
+					activeKind: "metismenu-active",
 					fixed_tab: {
-							icon:"fa fa-home",
-							src:""
+						icon: "fa fa-home",
+						src: ""
 					},
-					close_btns:true
+					close_btns: true
 					// tabsCallback: 需要自己定义，回调函数的参数会从tabsMenu中传入，cbOptions={index:, current:, active:}
 				});
 			});
