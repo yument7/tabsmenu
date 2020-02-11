@@ -30,8 +30,7 @@
 				activeKind: ".active",
 				isActive: false
 			},
-			tabsCallback: function (opt) {
-			}
+			tabsCallback: function (opt) {}
 		};
 
 		$.extend(true, defaults, options);
@@ -48,6 +47,8 @@
 		var	otherKind = defaults.other_items.kind,
 			otherActiveKind = defaults.other_items.activeKind,
 			otherIsActive = defaults.other_items.isActive;
+		
+		var indexCount=0;
 		var tabsCallback = defaults.tabsCallback;
 
 		init();
@@ -94,6 +95,7 @@
 			$(mainKind).each(function (k) {
 				if (!$(this).attr("data-index")) {
 					var index = defaults.fixed_tab.status ? k + 1 : k;
+					indexCount = index;
 					$(this).attr("data-index", index);
 				}
 			});
