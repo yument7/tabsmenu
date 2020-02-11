@@ -21,10 +21,16 @@
 			},
 			close_btns: false,
 			theme: "default",
-			kind: "",
-			activeKind: ".active",
+			main_items:{
+				kind: "",
+				activeKind: ".active"
+			},
+			other_items:{
+				kind: "",
+				activeKind: ".active",
+				isActive: false
+			},
 			tabsCallback: function (opt) {
-				console.log(opt);
 			}
 		};
 
@@ -37,8 +43,11 @@
 		};
 
 		var _this = $(this);
-		var kind = defaults.kind;
-		var activeKind = defaults.activeKind;
+		var mainKind = defaults.main_items.kind,
+			mainActiveKind = defaults.main_items.activeKind;
+		var	otherKind = defaults.other_items.kind,
+			otherActiveKind = defaults.other_items.activeKind,
+			otherIsActive = defaults.other_items.isActive;
 		var tabsCallback = defaults.tabsCallback;
 
 		init();
@@ -80,9 +89,9 @@
 		}
 
 		// the judge of tree menu
-		if (kind) {
+		if (mainKind) {
 			// add the attribute of index to item
-			$(kind).each(function (k) {
+			$(mainKind).each(function (k) {
 				if (!$(this).attr("data-index")) {
 					var index = defaults.fixed_tab.status ? k + 1 : k;
 					$(this).attr("data-index", index);
@@ -90,7 +99,18 @@
 			});
 
 			// add the event of click on item
-			$(kind).on("click", triggerItemEvent);
+			$(mainKind).on("click", triggerItemEvent);
+		}
+		
+		if(otherKind){
+			$(otherKind).each(function(k){
+				if (!$(this).attr("data-index")) {
+					var index = indexCount + k + 1;
+					$(this).attr("data-index", index);
+				}
+			})
+			
+			$(otherKind).on("click",triggerItemEvent);
 		}
 
 		// add the event of click on tab
@@ -199,10 +219,15 @@
 
 		// response the selected item of the tree menu 
 		function itemActived(index) {
-			if (index) {
-				var current = $(kind + '[data-index="' + index + '"]');
-				$(kind).removeClass(activeKind);
-				current.addClass(activeKind);
+			if (index && index <= indexCount) {
+				var current = $(mainKind + '[data-index="' + index + '"]');
+				$(mainKind).removeClass(mainActiveKind);
+				current.addClass(mainActiveKind);
+			}
+			if(index && index > indexCount && otherIsActive) {
+				var current = $(otherKind + '[data-index="' + index + '"]');
+				$(otherKind).removeClass(otherActiveKind);
+				current.addClass(otherActiveKind);
 			}
 		}
 

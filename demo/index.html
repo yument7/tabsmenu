@@ -91,13 +91,19 @@
 		<script>
 			$(function() {
 				$("#test").tabsMenu({
-					kind: ".J_menuItem",
-					activeKind: "metismenu-active",
+					
 					fixed_tab: {
 						icon: "fa fa-home",
 						src: ""
 					},
-					close_btns: true
+					main_items:{
+						kind: ".J_menuItem",
+						activeKind: "item-active"
+					},
+					other_items:{
+						kind:".J_otherItem"
+					},
+					close_btns: true				
 					// tabsCallback: 需要自己定义，回调函数的参数会从tabsMenu中传入，cbOptions={index:, current:, active:}
 				});
 			});
